@@ -1,0 +1,26 @@
+<h2> Resources </h2>
+<h3>
+<div>
+  <button class = "button" onclick="createResource()">New resource</button>
+</div>
+</h3>  
+<div class="wrapper">
+<table style="width:80%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Description</th>
+    <th>Delete</th>
+    <th>Update</th>
+  </tr>
+  <tr *ngFor="let Array of data">
+    <td>{{Array.resourceId}}</td>
+    <td>{{Array.name}}</td>
+    <td>{{Array.url}}</td>
+    <td>{{Array.description}}</td>
+    <td><button class = "button" onclick="deleteResource()">Delete</button></td>
+    <td><button class = "button" onclick="updateResource()">Update</button></td>
+  </tr>
+</table> 
+</div>
