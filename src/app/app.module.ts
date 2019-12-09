@@ -6,12 +6,16 @@ import { ResourcesComponent } from './resources';
 import { HomeComponent } from './home';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LanguagesComponent } from './languages/languages.component';
+import { FrameworksComponent } from './frameworks/frameworks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResourcesComponent,
-    HomeComponent
+    HomeComponent,
+    LanguagesComponent,
+    FrameworksComponent,
   ],
   imports: [
     BrowserModule,

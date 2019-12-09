@@ -1,7 +1,7 @@
+<html>
 <h2> Resources </h2>
 <h3>
 <div>
-  <button class = "button" onclick="createResource()">New resource</button>
 </div>
 </h3>  
 <div class="wrapper">
@@ -16,11 +16,28 @@
   </tr>
   <tr *ngFor="let Array of data">
     <td>{{Array.resourceId}}</td>
-    <td>{{Array.name}}</td>
-    <td>{{Array.url}}</td>
-    <td>{{Array.description}}</td>
-    <td><button class = "button" onclick="deleteResource()">Delete</button></td>
-    <td><button class = "button" onclick="updateResource()">Update</button></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
+    <td style="width: 30px;"><button class = "button" onclick="deleteResourceButton(Array)">Delete</button></td>
+    <td style="width: 30px;"><button class = "button" onclick="updateResource()">Update</button></td>
   </tr>
 </table> 
 </div>
+<form>
+<div>
+  <label>Resource name:
+    <input #name />
+  </label>
+  <label>Resource url:
+    <input #url />
+  </label>
+  <label>Resource description:
+    <input #description />
+  </label>
+  <button class = "button" (click)="add(name.value); name.value=''">
+    add
+  </button>
+</div>
+</form>
+</html>

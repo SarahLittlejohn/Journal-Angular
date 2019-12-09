@@ -1,3 +1,8 @@
+html {
+
+  background: #F6F6F6;
+}
+
 p {
 
     padding: 0 0 1.3rem;
@@ -42,8 +47,10 @@ p {
   }
 
   table {
-    margin-left: auto;
-    margin-right: auto
+    width: 100%;
+    margin-left: 90px;
+    margin-right: auto;
+    display: inline-block;
   }
 
   table, th, td {
@@ -59,6 +66,30 @@ p {
     padding: 5px;
     text-align: left;    
   }
+
+  td {
+    width:300px;
+    height:140px;
+  }
+
+  th {
+    width:200px;
+  }
+
+  input {
+    width: 300px;
+    font-size: 1.4rem;
+    color: black;
+    resize: none;
+ }
+
+ textarea {
+  width: 300px;
+  height:140px;
+  font-size: 1.4rem;
+  color: black;
+  resize: none;
+}
 
   .button {
   
@@ -80,4 +111,25 @@ p {
   
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
+  }
+
+  form {
+
+    background: #F6F6F6;
+    margin-left: 10.4rem;
+    margin-top: 1rem;
+    display: inline-block;
+    position: absolute;
+    text-align: center
+  }
+
+  label {
+
+    padding: 0 0rem 0rem;
+    font-size: 1.4rem;
+    color: black;
+    margin-left: auto;
+    margin-right: 2rem
+    
+
   }
