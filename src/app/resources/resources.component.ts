@@ -21,6 +21,7 @@ export class ResourcesComponent {
   constructor(private appService: AppService) {
     console.log('Hello');
     this.getResources();
+    // this.deleteResource(Resource);
   }
 
   getResources() {
@@ -29,20 +30,20 @@ export class ResourcesComponent {
       this.data = data
     })
   }
-  
-  updateResource(): void {
-    this.appService.updateData(this.data)
-  }
-  
-  // deleteResource(resource: Resource): Observable<Resource> {
-  //   console.log('reached');
-  //   const url = `${this.apiUrl}/${resource.resourceId}`;
-  //   return this.http.delete<Resource>(url);
-  // }
 
-  // deleteResourceButton(resource: Resource): void {
-  //   this.data = this.data.filter(r => r !== resource);
-  //   this.deleteResource(resource).subscribe();
-  // }
+  async deleteResource(resource: Resource): void {
+    await this.appService.deleteResource(resource);
+    this.getResources();
+  }
+    
+  async updateResource(resource: Resource): void {
+    await this.appService.updateData(resource);
+    this.getResources();
+  }
+
+  async addResource(resource: Resource): void {
+    await this.appService.addResource(resource);
+    this.getResources();
+  }
 
 }
