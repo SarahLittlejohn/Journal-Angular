@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LanguagesComponent } from './languages/languages.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
+import { ResourceFormComponent } from './resources/resource-form/resource-form.component';
+import { FrameworkFormComponent } from './frameworks/framework-form/framework-form.component';
+import { LanguageFormComponent } from './languages/language-form/language-form.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
     HomeComponent,
     LanguagesComponent,
     FrameworksComponent,
+    ResourceFormComponent,
+    FrameworkFormComponent,
+    LanguageFormComponent,
   ],
   imports: [
     BrowserModule,

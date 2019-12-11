@@ -1,5 +1,5 @@
 <html>
-<h2> Resources </h2>
+<h2> Frameworks </h2>
 <h3>
 <div>
 </div>
@@ -15,14 +15,14 @@
     <th>Update</th>
   </tr>
   <tr *ngFor="let Array of data">
-    <td>{{Array.resourceId}}</td>
+    <td>{{Array.frameworkId}}</td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
-    <td style="width: 30px;"><button class = "button" (click)="deleteResource(Array)">Delete</button></td>
-    <td style="width: 30px;"><button class = "button" (click)="updateResource(Array)">Update</button></td>
+    <td style="width: 30px;"><button class = "button" (click)="deleteFramework(Array)">Delete</button></td>
+    <td style="width: 30px;"><button class = "button" (click)="updateFramework(Array)">Update</button></td>
   </tr>
 </table> 
 </div>
-<app-resource-form></app-resource-form>
+<app-framework-form></app-framework-form>
 </html>

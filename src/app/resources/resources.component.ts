@@ -5,11 +5,12 @@ import 'rxjs/add/operator/map';
 import { Resource } from './resource';
 import { Observable} from 'rxjs';
 import { AppService } from '../app.service';
+import { resource } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-resources',
   templateUrl: './resources.component.html',
-  styleUrls: ['./resources.component.css']
+  styleUrls: ['./resources.component.css',]
 })
 
 export class ResourcesComponent {
@@ -21,7 +22,6 @@ export class ResourcesComponent {
   constructor(private appService: AppService) {
     console.log('Hello');
     this.getResources();
-    // this.deleteResource(Resource);
   }
 
   getResources() {
@@ -31,17 +31,17 @@ export class ResourcesComponent {
     })
   }
 
-  async deleteResource(resource: Resource): void {
+  async deleteResource(resource: Resource) {
     await this.appService.deleteResource(resource);
     this.getResources();
   }
     
-  async updateResource(resource: Resource): void {
+  async updateResource(resource: Resource) {
     await this.appService.updateData(resource);
     this.getResources();
   }
 
-  async addResource(resource: Resource): void {
+  async createResource(resource: Resource) {
     await this.appService.addResource(resource);
     this.getResources();
   }

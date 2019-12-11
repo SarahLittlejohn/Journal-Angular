@@ -1,0 +1,40 @@
+.resource-form {
+
+  margin-left: 220px;
+}
+
+.input-field {
+
+  font-size: 1.4rem;
+  color: black;
+}
+
+  input {
+
+    width: 220px;
+    font-size: 1.4rem;
+    color: black;
+    resize: none;
+ }
+
+
+ .button {
+  
+  background-color: white;
+  border: none;
+  color: black;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  width: 170px;
+  margin-right: auto
+}
+
+.button:hover {
+
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}

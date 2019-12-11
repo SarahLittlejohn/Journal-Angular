@@ -1,0 +1,43 @@
+<html>
+<h2> Languages </h2>
+<h3>
+<div>
+</div>
+</h3>  
+<div class="wrapper">
+<table style="width:80%">
+  <tr>
+    <th class="ID">ID</th>
+    <th class="Name">Name</th>
+    <th class="Url">Url</th>
+    <th class="Description"> Description</th>
+    <th class="Delete">Delete</th>
+    <th class="Update">Update</th>
+  </tr>
+  <tr *ngFor="let Array of data">
+    <td>{{Array.languageId}}</td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
+    <td style="width: 30px;"><button class = "button" (click)="deleteLanguage(Array)">Delete</button></td>
+    <td style="width: 30px;"><button class = "button" (click)="updateLanguage(Array)">Update</button></td>
+  </tr>
+</table> 
+</div>
+<form>
+<div>
+  <label>Language name:
+    <input #name />
+  </label>
+  <label>Language url:
+    <input #url />
+  </label>
+  <label>Language description:
+    <input #description />
+  </label>
+  <button class = "button" (click)="add(name.value); name.value=''">
+    add
+  </button>
+</div>
+</form>
+</html>
