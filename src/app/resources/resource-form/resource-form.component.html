@@ -1,4 +1,4 @@
-<form class="resource-form">
+<form class="resource-form" action="http://localhost:8096/frameworks" method="POST">
     <div>
       <label class="input-field">Resource name:
         <input #name />
@@ -27,7 +27,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <button class = "button" (click)="createResource(name.value, url.value, description.value)">
+      <button class="button" (click)="createResource(name.value, url.value, description.value)">
         add
       </button>
     </div>

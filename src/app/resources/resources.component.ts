@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/map';
@@ -41,9 +41,6 @@ export class ResourcesComponent {
     this.getResources();
   }
 
-  async createResource(resource: Resource) {
-    await this.appService.addResource(resource);
-    this.getResources();
-  }
+
 
 }

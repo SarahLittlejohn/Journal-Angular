@@ -39,9 +39,4 @@ export class LanguagesComponent {
     this.getLanguages();
   }
 
-  async createLanguage(language: Language) {
-    await this.appService.addLanguage(language);
-    this.getLanguages();
-  }
-
 }

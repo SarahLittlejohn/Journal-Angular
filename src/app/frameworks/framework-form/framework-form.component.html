@@ -1,8 +1,12 @@
 <form class="framework-form">
     <div>
-      <label class="input-field">Framework name:
-        <input #name />
-      </label>
+      <label class="input-field" for="name">Framework name:</label>
+      <input #name list="names" id="name" name="name">
+      <datalist id="names">
+          <option value="Angular"></option>
+          <option value="Spring boot"></option>
+          <option value="Bootstrap"></option>
+      </datalist>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 

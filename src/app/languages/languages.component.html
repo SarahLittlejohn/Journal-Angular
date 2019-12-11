@@ -7,12 +7,12 @@
 <div class="wrapper">
 <table style="width:80%">
   <tr>
-    <th class="ID">ID</th>
-    <th class="Name">Name</th>
-    <th class="Url">Url</th>
-    <th class="Description"> Description</th>
-    <th class="Delete">Delete</th>
-    <th class="Update">Update</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Description</th>
+    <th>Delete</th>
+    <th>Update</th>
   </tr>
   <tr *ngFor="let Array of data">
     <td>{{Array.languageId}}</td>
@@ -24,20 +24,5 @@
   </tr>
 </table> 
 </div>
-<form>
-<div>
-  <label>Language name:
-    <input #name />
-  </label>
-  <label>Language url:
-    <input #url />
-  </label>
-  <label>Language description:
-    <input #description />
-  </label>
-  <button class = "button" (click)="add(name.value); name.value=''">
-    add
-  </button>
-</div>
-</form>
+<app-language-form (getLanguages)="getLanguages()"></app-language-form>
 </html>
