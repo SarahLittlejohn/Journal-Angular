@@ -1,0 +1,43 @@
+<form class="language-form">
+    <div>
+    <label class="input-field" for="name">Language name:</label>
+    <input #name list="names" id="name" name="name">
+    <datalist id="names">
+        <option value="Java"></option>
+        <option value="Python"></option>
+        <option value="JavaScript"></option>
+        <option value="Html"></option>
+        <option value="CSS"></option>
+        <option value="Matlab"></option>
+        <option value="C"></option>
+        <option value="C#"></option>
+    </datalist>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Language url:
+        <input #url />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Language description:
+        <input #description />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class = "button" (click)="createLanguage(name.value, url.value, description.value)">
+        add
+      </button>
+    </div>
+</form>

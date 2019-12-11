@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/map';
 import { Resource } from './resource';
 import { Observable} from 'rxjs';
 import { AppService } from '../app.service';
+import { resource } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-resources',
   templateUrl: './resources.component.html',
-  styleUrls: ['./resources.component.css']
+  styleUrls: ['./resources.component.css',]
 })
 
 export class ResourcesComponent {
@@ -29,20 +30,17 @@ export class ResourcesComponent {
       this.data = data
     })
   }
-  
-  updateResource(): void {
-    this.appService.updateData(this.data)
-  }
-  
-  // deleteResource(resource: Resource): Observable<Resource> {
-  //   console.log('reached');
-  //   const url = `${this.apiUrl}/${resource.resourceId}`;
-  //   return this.http.delete<Resource>(url);
-  // }
 
-  // deleteResourceButton(resource: Resource): void {
-  //   this.data = this.data.filter(r => r !== resource);
-  //   this.deleteResource(resource).subscribe();
-  // }
+  async deleteResource(resource: Resource) {
+    await this.appService.deleteResource(resource);
+    this.getResources();
+  }
+    
+  async updateResource(resource: Resource) {
+    await this.appService.updateData(resource);
+    this.getResources();
+  }
+
+
 
 }

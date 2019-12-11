@@ -1,5 +1,3 @@
-@import './resource-form/resource-form.component.css';
-
 html {
 
   background: #F6F6F6;
@@ -109,3 +107,29 @@ p {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
   }
+
+  form {
+    margin-left: 10rem;
+    background: #F6F6F6;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+  }
+
+  
+  label {
+
+    padding: 0 0rem 0rem;
+    font-size: 1.4rem;
+    color: black;
+    margin-left: auto;
+    margin-right: 2rem
+  }
+
+  input {
+
+    width: 300px;
+    font-size: 1.4rem;
+    color: black;
+    resize: none;
+ }

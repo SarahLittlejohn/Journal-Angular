@@ -1,0 +1,39 @@
+<form class="framework-form">
+    <div>
+      <label class="input-field" for="name">Framework name:</label>
+      <input #name list="names" id="name" name="name">
+      <datalist id="names">
+          <option value="Angular"></option>
+          <option value="Spring boot"></option>
+          <option value="Bootstrap"></option>
+      </datalist>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Framework url:
+        <input #url />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Framework description:
+        <input #description />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class = "button" (click)="createFramework(name.value, url.value, description.value)">
+        add
+      </button>
+    </div>
+</form>
+

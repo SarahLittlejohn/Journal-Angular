@@ -1,0 +1,34 @@
+<form class="resource-form" action="http://localhost:8096/frameworks" method="POST">
+    <div>
+      <label class="input-field">Resource name:
+        <input #name />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Resource url:
+        <input #url />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Resource description:
+        <input #description />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class="button" (click)="createResource(name.value, url.value, description.value)">
+        add
+      </button>
+    </div>
+</form>
