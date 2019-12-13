@@ -7,22 +7,23 @@
 <div class="wrapper">
 <table style="width:80%">
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Description</th>
-    <th>Delete</th>
-    <th>Update</th>
+    <th style="text-align:center">ID</th>
+    <th style="text-align:center">Name</th>
+    <th style="text-align:center">Url</th>
+    <th style="text-align:center">Description</th>
+    <th style="text-align:center">Delete</th>
+    <th style="text-align:center">Update</th>
   </tr>
   <tr *ngFor="let Array of data">
-    <td>{{Array.frameworkId}}</td>
-    <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
-    <td style="width: 120px;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
-    <td style="width: 120px;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
-    <td style="width: 30px;"><button class = "button" (click)="deleteFramework(Array)">Delete</button></td>
-    <td style="width: 30px;"><button class = "button" (click)="updateFramework(Array)">Update</button></td>
+    <td style="text-align:center">{{Array.frameworkId}}</td>
+    <td style="width: 120px; align-content:center;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 120px; align-content:center;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
+    <td style="width: 120px; align-content:center;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
+    <td style="width: 30px; text-align:center;"><button class = "button" (click)="deleteFramework(Array)">Delete</button></td>
+    <td style="width: 30px; text-align:center;"><button class = "button" (click)="updateFramework(Array)">Update</button></td>
   </tr>
 </table> 
 </div>
 <app-framework-form (getFrameworks)="getFrameworks()"></app-framework-form>
 </html>
+

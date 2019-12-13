@@ -35,7 +35,7 @@ export class FrameworksComponent {
   }
     
   async updateFramework(framework: Framework) {
-    await this.appService.updateFData(framework);
+    this.appService.updateFData(framework);
     this.getFrameworks();
   }
 

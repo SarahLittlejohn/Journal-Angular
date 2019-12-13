@@ -1,4 +1,36 @@
+<html>
 <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
-<h2> Select type of technology: <a routerLink="/resources"> Resources</a></h2>
-<h3><a routerLink="/languages"> Languages</a><br><a routerLink="/frameworks"> Frameworks</a></h3>
 
+<div class="table">
+<table>
+    <tr>
+        <th style="width: 40px; text-align:center;">ID</th>
+        <th style="width: 150px; text-align:center;">Resource type</th>
+        <th style="text-align:center">Name</th>
+        <th style="text-align:center">Url</th>
+        <th style="text-align:center">Description</th>
+    </tr>
+    <tr *ngFor="let Array of data">
+            <td style="text-align:center">{{Array.resourceId}}</td>
+            <td style="text-align:center">Other resource</td>
+            <td style="text-align:center">{{Array.name}}</td>
+            <td style="text-align:center">{{Array.url}}</td>
+            <td style="text-align:center">{{Array.description}}</td>
+    </tr>
+    <tr *ngFor="let Array of data1">
+            <td style="text-align:center">{{Array.languageId}}</td>
+            <td style="text-align:center">Language</td>
+            <td style="text-align:center">{{Array.name}}</td>
+            <td style="text-align:center">{{Array.url}}</td>
+            <td style="text-align:center">{{Array.description}}</td>
+    </tr>
+    <tr *ngFor="let Array of data2">
+            <td style="text-align:center">{{Array.frameworkId}}</td>
+            <td style="text-align:center">Framework</td>
+            <td style="text-align:center">{{Array.name}}</td>
+            <td style="text-align:center">{{Array.url}}</td>
+            <td style="text-align:center">{{Array.description}}</td>
+    </tr>
+</table>
+</div>
+</html>

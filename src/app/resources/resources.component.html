@@ -7,15 +7,15 @@
 <div class="wrapper">
 <table style="width:80%">
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Description</th>
-    <th>Delete</th>
-    <th>Update</th>
+    <th style="text-align:center">ID</th>
+    <th style="text-align:center">Name</th>
+    <th style="text-align:center">Url</th>
+    <th style="text-align:center">Description</th>
+    <th style="text-align:center">Delete</th>
+    <th style="text-align:center">Update</th>
   </tr>
   <tr *ngFor="let Array of data">
-    <td>{{Array.resourceId}}</td>
+    <td style="text-align:center">{{Array.resourceId}}</td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.url" placeholder="Url"></textarea></td>
     <td style="width: 120px;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>

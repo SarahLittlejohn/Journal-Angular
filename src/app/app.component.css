@@ -35,8 +35,8 @@
   h1 {
     text-align: center;
     padding: 1.5rem 2.5rem;
-    background-image: linear-gradient(120deg, #9d50c9 0%, #96b6ec 100%);
-    margin: 0 0 2rem 0;
+    background-image: linear-gradient(120deg, #a840b6 0%, #68b0eb 100%);
+    margin: 0 0 -0.40rem 0;
     font-size: 3rem;
     color: white;
   }
@@ -44,8 +44,29 @@
   h2 {
   
     padding: 1.5rem 2.5rem;
-    background-image: linear-gradient(120deg, #9d50c9 0%, #96b6ec 100%);
+    background-image: linear-gradient(120deg, #a840b6 0%, #68b0eb 100%);
     font-size: 1.5rem;
     color: white;
     
+  }
+
+  nav {
+    width: 100vw;
+    overflow: hidden;
+    background-color: white;
+  }
+   
+ul {
+    margin: 0;
+    padding: 0;
+  }
+
+nav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 26px;
+    background-color: white;
   }

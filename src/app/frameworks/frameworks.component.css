@@ -21,7 +21,7 @@ p {
     padding: 0 0rem 0rem;
     font-size: 2.1rem;
     color: black;
-    margin-left: 11.6rem;
+    margin-left: 213px;
     margin-right: auto
 
   }
@@ -56,7 +56,7 @@ p {
   }
 
   table, th, td {
-
+    background-color: white;
     border: 1px solid black;
     border-collapse: collapse;
     font-size: 1.4rem;
@@ -82,6 +82,8 @@ p {
 
   textarea {
 
+  border: none; 
+  background-color: white;
   width: 300px;
   height:140px;
   font-size: 1.4rem;
