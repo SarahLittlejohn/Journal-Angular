@@ -6,6 +6,7 @@ import { Resource } from './resource';
 import { Observable} from 'rxjs';
 import { AppService } from '../app.service';
 import { resource } from 'selenium-webdriver/http';
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-resources',
@@ -18,6 +19,7 @@ export class ResourcesComponent {
   private apiUrl = 'http://localhost:8096/resources';
   data: any = {};
   ResourceService: any;
+  resources: Resource[];
 
   constructor(private appService: AppService) {
     console.log('Hello');
@@ -32,15 +34,18 @@ export class ResourcesComponent {
   }
 
   async deleteResource(resource: Resource) {
-    await this.appService.deleteResource(resource);
-    this.getResources();
+    this.data = this.data.filter(r => r !== resource);
+    this.appService.deleteResource(resource).subscribe();
   }
-    
-  async updateResource(resource: Resource) {
+
+  async updateResource(resource: Resource): Promise<any> {
     await this.appService.updateData(resource);
     this.getResources();
   }
 
-
+  getResourcesByFilter(id: number, filterBy: any): void {
+    this.appService.filterResources(id, filterBy)
+      .subscribe(resources => this.resources = resources);
+  }
 
 }

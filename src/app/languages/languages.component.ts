@@ -15,7 +15,6 @@ export class LanguagesComponent {
   title = 'Languages';
   private apiUrl = 'http://localhost:8096/languages';
   data: any = {};
-  ResourceService: any;
 
   constructor(private appService: AppService) {
     console.log('Hello');
@@ -29,12 +28,12 @@ export class LanguagesComponent {
     })
   }
 
-  async deleteLanguage(language: Language) {
-    await this.appService.deleteLanguage(language);
-    this.getLanguages();
+  deleteLanguage(language: Language): void {
+    this.data = this.data.filter(l => l !== language);
+    this.appService.deleteLanguage(language).subscribe();
   }
     
-  async updateLanguage(language: Language) {
+  async updateLanguage(language: Language): Promise<any> {
     await this.appService.updateLData(language);
     this.getLanguages();
   }

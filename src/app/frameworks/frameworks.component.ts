@@ -30,12 +30,12 @@ export class FrameworksComponent {
   }
   
   async deleteFramework(framework: Framework) {
-    await this.appService.deleteFramework(framework);
-    this.getFrameworks();
+    this.data = this.data.filter(f => f !== framework);
+    this.appService.deleteFramework(framework).subscribe();
   }
     
-  async updateFramework(framework: Framework) {
-    this.appService.updateFData(framework);
+  async updateFramework(framework: Framework): Promise<any> {
+    await this.appService.updateFData(framework);
     this.getFrameworks();
   }
 
