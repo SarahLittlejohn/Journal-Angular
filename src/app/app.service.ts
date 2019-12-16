@@ -32,17 +32,16 @@ httpOptions = {
     return this.http.get(this.apiUrl);
   }
 
-  updateData(resource: Resource) {
+  async updateData(resource: Resource) {
     const url = `${this.apiUrl}/${resource.resourceId}`;
-    this.http.put(url, resource, httpOptions).subscribe();
+    return new Promise<void>(resolve => {
+      this.http.put(url, resource, httpOptions).subscribe();
+    }); 
   }
 
-  deleteResource (resource: Resource) {
+  deleteResource (resource: Resource): Observable<Resource> {
     const url = `${this.apiUrl}/${resource.resourceId}`; 
-    this.http.delete(url, httpOptions)
-    .subscribe(res => {
-      return res;
-    });
+    return this.http.delete<Resource>(url);
   }
 
   addResource (resource: Resource) {
@@ -53,24 +52,28 @@ httpOptions = {
     });
   }
 
+  filterResources(id: number, filterBy: any): Observable<Resource[]> {
+    const url =  `${this.apiUrl}/${filterBy}/${id}`;
+    return this.http.get<Resource[]>(url);
+  }
+
   getLData() {
     return this.http.get(this.apiLUrl);
   }
 
-  updateLData(language: Language) {
+  async updateLData(language: Language) {
     const url = `${this.apiLUrl}/${language.languageId}`;
+    return new Promise<void>(resolve => {
     this.http.put(url, language, httpOptions).subscribe();
+  }); 
   }
 
-  deleteLanguage (language: Language) {
-    const url = `${this.apiLUrl}/${language.languageId}`; 
-    this.http.delete(url, httpOptions)
-    .subscribe(res => {
-      return res;
-    });
+  deleteLanguage(language: Language): Observable<Language> {
+    const url = `${this.apiLUrl}/${language.languageId}`;
+    return this.http.delete<Language>(url);
   }
 
-  addLanguage (language: Language) {
+  addLanguage(language: Language) {
     const url = `${this.apiLUrl}`; 
     this.http.post(url, language, httpOptions)
     .subscribe(res => {
@@ -82,24 +85,26 @@ httpOptions = {
     return this.http.get(this.apiFUrl);
   }
 
-  updateFData(framework: Framework) {
+  async updateFData(framework: Framework) {
     const url = `${this.apiFUrl}/${framework.frameworkId}`;
-    this.http.put(url, framework, httpOptions).subscribe();
+    return new Promise<void>(resolve => {
+      this.http.put(url, framework, httpOptions).subscribe();
+    }); 
   }
 
   deleteFramework (framework: Framework) {
     const url = `${this.apiFUrl}/${framework.frameworkId}`; 
-    this.http.delete(url, httpOptions)
-    .subscribe(res => {
-      return res;
-    });
+    return this.http.delete<Framework>(url);
   }
 
-  addFramework (framework: Framework) {
+  async addFramework (framework: Framework) {
     const url = `${this.apiFUrl}`; 
+    return new Promise<void>(resolve => {
     this.http.post(url, framework, httpOptions)
     .subscribe(res => {
       return res;
+    });
+    this.getFData();
     });
   }
 }
