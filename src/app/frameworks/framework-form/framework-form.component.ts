@@ -22,7 +22,7 @@ export class FrameworkFormComponent implements OnInit {
     new_framework.name = f_name;
     new_framework.url = f_url;
     new_framework.description = f_description;
-    await this.appService.addFramework(new_framework);
+    await this.appService.addFramework(new_framework); 
     this.getFrameworks.emit();
   }
   

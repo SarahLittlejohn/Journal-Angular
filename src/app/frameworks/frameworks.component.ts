@@ -39,9 +39,4 @@ export class FrameworksComponent {
     this.getFrameworks();
   }
 
-  async createFramework(framework: Framework) {
-    await this.appService.addFramework(framework);
-    this.getFrameworks();
-  }
-
 }

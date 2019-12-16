@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
 import { Resource } from './resources/resource';
 import { MessageService } from './message.service';
 import { Language } from './languages/language';
@@ -73,7 +72,7 @@ httpOptions = {
     return this.http.delete<Language>(url);
   }
 
-  addLanguage(language: Language) {
+  async addLanguage(language: Language) {
     const url = `${this.apiLUrl}`; 
     this.http.post(url, language, httpOptions)
     .subscribe(res => {
@@ -97,14 +96,13 @@ httpOptions = {
     return this.http.delete<Framework>(url);
   }
 
-  async addFramework (framework: Framework) {
-    const url = `${this.apiFUrl}`; 
+  async addFramework (framework: Framework)  {
     return new Promise<void>(resolve => {
+    const url = `${this.apiFUrl}`; 
     this.http.post(url, framework, httpOptions)
     .subscribe(res => {
       return res;
     });
-    this.getFData();
-    });
+  });
   }
 }
