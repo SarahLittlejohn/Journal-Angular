@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/map';
 import { AppService } from '../app.service';
@@ -12,6 +11,9 @@ import { Language } from './language';
 })
 
 export class LanguagesComponent {
+  static createLanguage(l_name: string, l_url: string, l_description: string) {
+    throw new Error("Method not implemented.");
+  }
   title = 'Languages';
   private apiUrl = 'http://localhost:8096/languages';
   data: any = {};
