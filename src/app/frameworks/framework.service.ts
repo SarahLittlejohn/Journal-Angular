@@ -20,15 +20,15 @@ export class FrameworkService {
     // initilise .getFData in constructor
   }
 
-  getFData() {
-    return this.http.get(this.apiUrl);
+  getFData(): Observable<Framework> {
+    return this.http.get<Framework>(this.apiUrl);
     // .get returns an observable 
   }
 
-  updateFData(framework: Framework) {
+  updateFData(framework: Framework): Observable<Framework> {
     const url = `${this.apiUrl}/${framework.frameworkId}`;
     // defines url to put
-    return this.http.put(url, framework, httpOptions);
+    return this.http.put<Framework>(url, framework, httpOptions);
     // returns an observable and subscribes 
   }
 

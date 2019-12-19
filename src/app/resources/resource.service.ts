@@ -10,6 +10,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class ResourceService {
 
   private apiUrl = 'http://localhost:8096/resources';
@@ -20,15 +21,15 @@ export class ResourceService {
     // initilise .getData in constructor
   }
 
-  getData() {
-    return this.http.get(this.apiUrl);
+  getData(): Observable<Resource> {
+    return this.http.get<Resource>(this.apiUrl);
     // .get returns an observable 
   }
 
-  updateData(resource: Resource) {
+  updateData(resource: Resource): Observable<Resource> {
     const url = `${this.apiUrl}/${resource.resourceId}`;
     // defines url to put
-    return this.http.put(url, resource, httpOptions);
+    return this.http.put<Resource>(url, resource, httpOptions);
     // returns an observable and subscribes 
   }
 

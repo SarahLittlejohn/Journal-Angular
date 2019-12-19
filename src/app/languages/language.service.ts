@@ -20,15 +20,15 @@ export class LanguageService {
     // initilise .getLData in constructor
   }
 
-  getLData() {
-    return this.http.get(this.apiLUrl);
+  getLData(): Observable<Language> {
+    return this.http.get<Language>(this.apiLUrl);
     // .get returns an observable 
   }
 
-  updateLData(language: Language) {
+  updateLData(language: Language): Observable<Language> {
     const url = `${this.apiLUrl}/${language.languageId}`;
     // defines url to put
-    return this.http.put(url, language, httpOptions);
+    return this.http.put<Language>(url, language, httpOptions);
     // returns an observable and subscribes 
   }
 
@@ -42,7 +42,7 @@ export class LanguageService {
   async addLanguage(language: Language) {
     const url = `${this.apiLUrl}`; 
     // defines url to post
-    this.http.post(url, language, httpOptions)
+    this.http.post<Language>(url, language, httpOptions)
     .subscribe(language => {
       return language;
     });

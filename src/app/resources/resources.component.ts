@@ -29,10 +29,12 @@ export class ResourcesComponent {
   deleteResource(resource: Resource) {
     this.data = this.data.filter(r => r !== resource);
     this.ResourceService.deleteResource(resource).subscribe();
+    this.ResourceService.getData().subscribe();
   }
 
   updateResource(resource: Resource) {
     this.ResourceService.updateData(resource).subscribe();
+    this.ResourceService.getData().subscribe();
   }
 
 }
