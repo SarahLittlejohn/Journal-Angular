@@ -20,8 +20,8 @@ export class FrameworkService {
     // initilise .getFData in constructor
   }
 
-  getFData(): Observable<Framework> {
-    return this.http.get<Framework>(this.apiUrl);
+  getFData(): Observable<Framework[]> {
+    return this.http.get<Framework[]>(this.apiUrl);
     // .get returns an observable 
   }
 
