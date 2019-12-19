@@ -20,8 +20,8 @@ export class LanguageService {
     // initilise .getLData in constructor
   }
 
-  getLData(): Observable<Language> {
-    return this.http.get<Language>(this.apiLUrl);
+  getLData(): Observable<Language[]> {
+    return this.http.get<Language[]>(this.apiLUrl);
     // .get returns an observable 
   }
 
