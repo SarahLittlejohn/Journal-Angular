@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Resource } from '../resource';
-import { AppService } from 'src/app/app.service';
+import { ResourceService } from 'src/app/resources/resource.service';
 
 @Component({
   selector: 'app-resource-form',
@@ -12,7 +12,7 @@ export class ResourceFormComponent implements OnInit {
 
 @Output() getResources = new EventEmitter();
 
-  constructor(private appService: AppService) { }
+  constructor(private resourceService: ResourceService) { }
 
   ngOnInit() {
   }
@@ -22,7 +22,7 @@ export class ResourceFormComponent implements OnInit {
     new_resource.name = r_name;
     new_resource.url = r_url;
     new_resource.description = r_description;
-    await this.appService.addResource(new_resource);
+    await this.resourceService.addResource(new_resource);
     this.getResources.emit();
   }
   

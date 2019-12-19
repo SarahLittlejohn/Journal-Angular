@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/map';
-import { AppService } from '../app.service';
+import { FrameworkService } from 'src/app/frameworks/framework.service';
 import { Framework } from './framework';
 
 @Component({
@@ -17,13 +16,13 @@ export class FrameworksComponent {
   data: any = {};
   ResourceService: any;
 
-  constructor(private appService: AppService) {
+  constructor(private frameworkService: FrameworkService) {
     console.log('Hello');
     this.getFrameworks();
   }
 
   getFrameworks() {
-    this.appService.getFData().subscribe(data => {
+    this.frameworkService.getFData().subscribe(data => {
       console.log(data);
       this.data = data
     })
@@ -31,12 +30,11 @@ export class FrameworksComponent {
   
   async deleteFramework(framework: Framework) {
     this.data = this.data.filter(f => f !== framework);
-    this.appService.deleteFramework(framework).subscribe();
+    this.frameworkService.deleteFramework(framework).subscribe();
   }
     
-  async updateFramework(framework: Framework): Promise<any> {
-    await this.appService.updateFData(framework);
-    this.getFrameworks();
+  updateFramework(framework: Framework) {
+    this.frameworkService.updateFData(framework).subscribe();
   }
 
 }

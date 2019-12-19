@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 import { Language } from '../language';
+import { LanguageService } from 'src/app/languages/language.service';
 
 @Component({
   selector: 'app-language-form',
@@ -12,7 +13,7 @@ export class LanguageFormComponent implements OnInit {
 
   @Output() getLanguages = new EventEmitter();
   
-    constructor(private appService: AppService) { }
+    constructor(private LanguageService: LanguageService) { }
   
     ngOnInit() {
     }
@@ -22,7 +23,7 @@ export class LanguageFormComponent implements OnInit {
       new_language.name = l_name;
       new_language.url = l_url;
       new_language.description = l_description;
-      await this.appService.addLanguage(new_language);
+      await this.LanguageService.addLanguage(new_language);
       this.getLanguages.emit();
     }
     
