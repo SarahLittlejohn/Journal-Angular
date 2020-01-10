@@ -17,13 +17,15 @@ export class ResourceFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  async createResource(r_name: string, r_url: string, r_description: string) {
+  createResource(r_name: string, r_url: string, r_description: string) {
     let new_resource = new Resource;
     new_resource.name = r_name;
     new_resource.url = r_url;
     new_resource.description = r_description;
-    await this.resourceService.addResource(new_resource);
-    this.getResources.emit();
-  }
+    this.resourceService.addResource(new_resource);
+    setTimeout(()=>{
+      this.getResources.emit();
+      }, 100);
+    }
   
 }

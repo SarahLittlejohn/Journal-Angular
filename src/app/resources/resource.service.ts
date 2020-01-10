@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Resource } from './resource';
 import { Observable } from 'rxjs';
+import { promise } from 'protractor';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -40,7 +41,7 @@ export class ResourceService {
     // deletes element and returns observable 
   }
 
-  async addResource(resource: Resource) {
+  addResource(resource: Resource) {
     const url = `${this.apiUrl}`; 
     // defines url to post
     this.http.post(url, resource, httpOptions)

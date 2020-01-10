@@ -39,7 +39,7 @@ export class FrameworkService {
     // deletes element and returns observable 
   }
 
-  async addFramework(framework: Framework) {
+  addFramework(framework: Framework) {
     const url = `${this.apiUrl}`; 
     // defines url to post
     this.http.post(url, framework, httpOptions)

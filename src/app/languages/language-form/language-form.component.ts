@@ -18,13 +18,15 @@ export class LanguageFormComponent implements OnInit {
     ngOnInit() {
     }
   
-    async createLanguage(l_name: string, l_url: string, l_description: string) {
+    createLanguage(l_name: string, l_url: string, l_description: string) {
       let new_language = new Language;
       new_language.name = l_name;
       new_language.url = l_url;
       new_language.description = l_description;
-      await this.LanguageService.addLanguage(new_language);
-      this.getLanguages.emit();
-    }
-    
+      this.LanguageService.addLanguage(new_language);
+      setTimeout(()=>{
+        this.getLanguages.emit();
+        }, 100);
+      }
+
   }

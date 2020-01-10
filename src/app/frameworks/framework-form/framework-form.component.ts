@@ -17,14 +17,16 @@ export class FrameworkFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  async createFramework(f_name: string, f_url: string, f_description: string) {
+  createFramework(f_name: string, f_url: string, f_description: string) {
     let new_framework = new Framework;
     new_framework.name = f_name;
     new_framework.url = f_url;
     new_framework.description = f_description;
-    await this.frameworkService.addFramework(new_framework); 
-    this.getFrameworks.emit();
-  }
+    this.frameworkService.addFramework(new_framework); 
+    setTimeout(()=>{
+      this.getFrameworks.emit();
+      }, 100);
+    }
   
 }
 
