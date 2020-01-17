@@ -1,0 +1,25 @@
+<form class="resource-form" action="http://localhost:8096/frameworks" method="POST">
+    <div>
+      <label class="input-field">Resource name:
+        <input #name />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Info:
+        <input #info />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class="button" (click)="createDefinition(name.value, info.value)">
+        add
+      </button>
+    </div>
+</form>

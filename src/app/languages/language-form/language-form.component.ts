@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { AppService } from 'src/app/app.service';
 import { Language } from '../language';
 import { LanguageService } from 'src/app/languages/language.service';
 

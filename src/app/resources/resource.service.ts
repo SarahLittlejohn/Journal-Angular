@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Resource } from './resource';
 import { Observable } from 'rxjs';
-import { promise } from 'protractor';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,7 +13,7 @@ const httpOptions = {
 
 export class ResourceService {
 
-  private apiUrl = 'http://localhost:8096/resources';
+  private apiUrl = 'http://localhost:8098/resources';
   // define the apiUrl as a private property
 
   constructor(private http: HttpClient) { 

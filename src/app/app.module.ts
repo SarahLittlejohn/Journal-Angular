@@ -11,6 +11,8 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
 import { ResourceFormComponent } from './resources/resource-form/resource-form.component';
 import { FrameworkFormComponent } from './frameworks/framework-form/framework-form.component';
 import { LanguageFormComponent } from './languages/language-form/language-form.component';
+import { DefinitionsComponent } from 'src/app/definitions/definitions.component';
+import { DefinitionFormComponent } from './definitions/definitions-form/definition-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { LanguageFormComponent } from './languages/language-form/language-form.c
     HomeComponent,
     LanguagesComponent,
     FrameworksComponent,
+    DefinitionsComponent,
+    DefinitionFormComponent,
     ResourceFormComponent,
     FrameworkFormComponent,
     LanguageFormComponent,

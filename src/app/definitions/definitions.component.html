@@ -1,0 +1,22 @@
+<html>
+<h2> Definitions </h2>
+<h3>
+</h3>  
+<div class="wrapper">
+<table style="width:80%">
+  <tr>
+    <th style="text-align:center" mat-sort-header="name" >Name</th>
+    <th style="text-align:center">Info</th>
+    <th style="text-align:center">Delete</th>
+    <th style="text-align:center">Update</th>
+  </tr>
+  <tr *ngFor="let Array of data">
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 120px;"> <textarea [(ngModel)]="Array.info" placeholder="Info"></textarea></td>
+    <td style="width: 30px;"><button class = "button" (click)="deleteDefinition(Array)">Delete</button></td>
+    <td style="width: 30px;"><button class = "button" (click)="updateDefinition(Array)">Update</button></td>
+  </tr>
+</table> 
+</div>
+<app-definition-form (getDefinitions)="getDefinitions()"></app-definition-form>
+</html>
