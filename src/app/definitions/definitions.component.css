@@ -49,10 +49,14 @@ p {
 
   table {
 
+    border-collapse: collapse;
+    table-layout: fixed;
     width: 100%;
-    margin-left: 90px;
+    margin-left: 190px;
     margin-right: auto;
-    display: inline-block;
+    border: solid;
+    border-width: 2px solid black;
+
   }
 
   table, th, td {
@@ -72,34 +76,33 @@ p {
 
   td {
 
-    width:200px;
     height:140px;
   }
 
-  th {
+  .col1 {
 
-    width:200px;
+    width: 150px;
   }
 
-  tr td:nth-child(1) {
-    width:100px;
+
+  .col2 {
+
+    width: 950px;
   }
-  tr td:nth-child(2) {
-    width:200px;
-  }
-  tr td:nth-child(3) {
-    width:300px;
+
+  .button {
+
+    width: 170px;
   }
 
   textarea {
-
+    
+    text-align:center;
+    width:100%;
     border: none; 
     background-color: white;
-    width: 400px;
-    height:140px;
     font-size: 1.4rem;
     color: black;
-    resize: none;
  }
 
   .button {

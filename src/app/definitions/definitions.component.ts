@@ -24,7 +24,7 @@ export class DefinitionsComponent implements OnInit {
   getDefinitions() {
     this.definitionService.getData().subscribe(data => {
       console.log(data);
-      this.data = data
+      this.data = data;
     })
   }
 

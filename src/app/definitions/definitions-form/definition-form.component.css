@@ -1,41 +1,58 @@
-.resource-form {
+  .resource-form {
+    margin-top: 10px;
+    margin-left: 196px;
+  }
 
-  margin-left: 220px;
-}
+  .input-field {
 
-.input-field {
+    font-size: 1.4rem;
+    color: black;
+  }
 
-  font-size: 1.4rem;
-  color: black;
-}
 
   input {
 
     background-color: white;
-    width: 220px;
     font-size: 1.4rem;
     color: black;
     resize: none;
  }
 
+  .input1 {
 
- .button {
-  
-  background-color: white;
-  border: none;
-  color: black;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.4rem;
-  border-radius: 10px;
-  width: 170px;
-  margin-right: auto
-}
+    width: 200px;
+    background-color: white;
+    font-size: 1.4rem;
+    color: black;
+    resize: none;
+  }
 
-.button:hover {
+  .input2 {
+    
+    width: 677px;
+    background-color: white;
+    font-size: 1.4rem;
+    color: black;
+    resize: none;
+  }
 
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-  transform: translate3D(0, -2px, 0);
-}
+  .button {
+    
+    background-color: white;
+    border: none;
+    color: black;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    width: 170px;
+    margin-right: auto
+  }
+
+  .button:hover {
+
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    transform: translate3D(0, -2px, 0);
+  }
