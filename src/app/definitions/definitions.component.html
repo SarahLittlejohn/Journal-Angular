@@ -2,6 +2,7 @@
 <h2> Definitions </h2>
 <h3>
 </h3>  
+<app-definition-form (getDefinitions)="getDefinitions()"></app-definition-form>
 <div class="wrapper">
 <table style="width:80%; border:2px solid;" matSort>
   <ng-container matColumnDef="position">
@@ -22,5 +23,4 @@
   </tr>
 </table> 
 </div>
-<app-definition-form (getDefinitions)="getDefinitions()"></app-definition-form>
 </html>

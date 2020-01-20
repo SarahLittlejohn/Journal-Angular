@@ -1,6 +1,7 @@
   .resource-form {
     margin-top: 10px;
     margin-left: 196px;
+    margin-bottom: 10px;
   }
 
   .input-field {
@@ -29,7 +30,7 @@
 
   .input2 {
     
-    width: 677px;
+    width: 657px;
     background-color: white;
     font-size: 1.4rem;
     color: black;

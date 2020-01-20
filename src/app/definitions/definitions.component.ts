@@ -23,8 +23,17 @@ export class DefinitionsComponent implements OnInit {
 
   getDefinitions() {
     this.definitionService.getData().subscribe(data => {
+    // .getData() returns the data as observables and is subscribed to
       console.log(data);
-      this.data = data;
+      // the data is logged on the console
+      this.data = data.sort((a, b) => {
+      // the data that is subscribed to is the sorted version of the data recieved
+        if (a.name === b.name) return -1;
+        // if the two names are the same put a before b
+        return a.name.localeCompare(b.name);
+        // return 1 if b is sorted before a and -1 if a is sorted before b
+        // this goes through all the data two values at a time and sorts
+      });
     })
   }
 
