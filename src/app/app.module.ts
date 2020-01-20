@@ -13,6 +13,7 @@ import { FrameworkFormComponent } from './frameworks/framework-form/framework-fo
 import { LanguageFormComponent } from './languages/language-form/language-form.component';
 import { DefinitionsComponent } from 'src/app/definitions/definitions.component';
 import { DefinitionFormComponent } from './definitions/definitions-form/definition-form.component';
+import { DefinitionsSortComponent } from './definitions/definitions-sort/definitions-sort.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DefinitionFormComponent } from './definitions/definitions-form/definiti
     ResourceFormComponent,
     FrameworkFormComponent,
     LanguageFormComponent,
+    DefinitionsSortComponent,
   ],
   imports: [
     BrowserModule,
