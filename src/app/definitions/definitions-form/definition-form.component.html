@@ -1,6 +1,8 @@
 <form class="resource-form" action="http://localhost:8096/frameworks" method="POST">
     <div>
       <label class="input-field">Definition name:
+        <span>&nbsp;</span> 
+        <span>&nbsp;</span> 
         <input class="input1" #name />
       </label>
       <span>&nbsp;</span> 
@@ -10,6 +12,8 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <label class="input-field">Info:
+        <span>&nbsp;</span> 
+        <span>&nbsp;</span> 
         <input class="input2" #info />
       </label>
       <span>&nbsp;</span> 
@@ -19,7 +23,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <button class="button" (click)="createDefinition(name.value, info.value)">
-        add
+        Add
       </button>
     </div>
 </form>
