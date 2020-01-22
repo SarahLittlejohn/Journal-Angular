@@ -5,6 +5,7 @@ import { ResourcesComponent } from './resources';
 import { LanguagesComponent } from './languages/languages.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
+import { ProjectComponent } from './projects/project.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: 'languages', component: LanguagesComponent },
     { path: 'frameworks', component: FrameworksComponent },
     { path: 'definitions', component: DefinitionsComponent },
+    { path: 'projects', component: ProjectComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

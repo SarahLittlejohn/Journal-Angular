@@ -1,0 +1,26 @@
+<form class="stack-form">
+    <div>
+      <label class="input-field" for="name">Name:
+      <input #name list="names" id="name" name="name">
+    </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Stack:
+        <input type="checkbox" #stack id="stacks" required>
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class = "button" (click)="createStack(name.value, stack.value, description.value, start_date.value)">
+        Add
+      </button>
+    </div>
+</form>
+

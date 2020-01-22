@@ -1,0 +1,46 @@
+<form class="project-form">
+    <div>
+      <label class="input-field" for="name">Project name:
+      <input #name list="names" id="name" name="name">
+    </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Project stack:
+        <select #stack id="stacks" required>
+          <option value="Java">Java</option>
+        </select>
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Project description:
+        <input #description />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <label class="input-field">Project start date:
+        <input #start_date />
+      </label>
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <span>&nbsp;</span> 
+      <button class = "button" (click)="createProject(name.value, stack.value, description.value, start_date.value)">
+        Add
+      </button>
+    </div>
+</form>
+

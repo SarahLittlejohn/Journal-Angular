@@ -11,9 +11,12 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
 import { ResourceFormComponent } from './resources/resource-form/resource-form.component';
 import { FrameworkFormComponent } from './frameworks/framework-form/framework-form.component';
 import { LanguageFormComponent } from './languages/language-form/language-form.component';
-import { DefinitionsComponent } from 'src/app/definitions/definitions.component';
+import { DefinitionsComponent } from './definitions/definitions.component';
 import { DefinitionFormComponent } from './definitions/definitions-form/definition-form.component';
-import { DefinitionsSortComponent } from './definitions/definitions-sort/definitions-sort.component';
+import { StacksComponent } from './projects/stack/stack.component';
+import { ProjectFormComponent } from './projects/project-form/project-form.component';
+import { ProjectComponent } from './projects/project.component';
+import { StackFormComponent } from './projects/stack/stack-form/stack-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { DefinitionsSortComponent } from './definitions/definitions-sort/definit
     ResourceFormComponent,
     FrameworkFormComponent,
     LanguageFormComponent,
-    DefinitionsSortComponent,
+    ProjectComponent,
+    StacksComponent,
+    ProjectFormComponent,
+    StackFormComponent,
   ],
   imports: [
     BrowserModule,

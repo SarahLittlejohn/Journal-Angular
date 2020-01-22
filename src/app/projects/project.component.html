@@ -1,0 +1,28 @@
+<html>
+<h2> Projects </h2>
+<h3>
+</h3>  
+<div class="wrapper">
+<table style="width:80%">
+  <tr>
+    <th style="text-align:center">ID</th>
+    <th style="text-align:center">Name</th>
+    <th style="text-align:center">Stack</th>
+    <th style="text-align:center">Description</th>
+    <th style="text-align:center">Start Date</th>
+    <th style="text-align:center">Delete</th>
+    <th style="text-align:center">Update</th>
+  </tr>
+  <tr *ngFor="let Array of data">
+    <td style="text-align:center; width: 5%">{{Array.projectId}}</td>
+    <td style="width: 23%;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 23%;"> <textarea [(ngModel)]="Array.stack" placeholder="Stack"></textarea></td>
+    <td style="width: 23%;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
+    <td style="width: 11%;"> <textarea [(ngModel)]="Array.start_date" placeholder="Start date"></textarea></td>
+    <td style="width: 7.5%;"><button class = "button" (click)="deleteProject(Array)">Delete</button></td>
+    <td style="width: 7.5%;"><button class = "button" (click)="updateProject(Array)">Update</button></td>
+  </tr>
+</table> 
+</div>
+<app-project-form (getProjects)="getProjects()"></app-project-form>
+</html>
