@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class FrameworkService {
 
-  private apiUrl = 'http://localhost:8098/frameworks';
+  private apiUrl = 'http://localhost:8071/frameworks';
   // define the apiUrl as a private property
 
   constructor(private http: HttpClient) { 

@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class LanguageService {
 
-  private apiLUrl = 'http://localhost:8098/languages';
+  private apiLUrl = 'http://localhost:8071/languages';
   // define the apiLUrl as a private property
 
   constructor(private http: HttpClient) { 

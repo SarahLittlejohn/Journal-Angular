@@ -1,28 +1,44 @@
 <html>
-<h2> Projects </h2>
-<h3>
-</h3>  
-<div class="wrapper">
-<table style="width:80%">
+<br />
+<h2 style="margin-left: 60px;"> Projects </h2>
+<h2 style="margin-left: 1030px;"> Stacks </h2>
+
+
+
+<div class="wrapper;">
+<table style="width:55%; float: left; margin-right: 125px; margin-left: 55px;">
   <tr>
     <th style="text-align:center">ID</th>
     <th style="text-align:center">Name</th>
     <th style="text-align:center">Stack</th>
     <th style="text-align:center">Description</th>
     <th style="text-align:center">Start Date</th>
-    <th style="text-align:center">Delete</th>
-    <th style="text-align:center">Update</th>
+    <th style="text-align:center">Edit</th>
   </tr>
   <tr *ngFor="let Array of data">
     <td style="text-align:center; width: 5%">{{Array.projectId}}</td>
     <td style="width: 23%;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
     <td style="width: 23%;"> <textarea [(ngModel)]="Array.stack" placeholder="Stack"></textarea></td>
-    <td style="width: 23%;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
-    <td style="width: 11%;"> <textarea [(ngModel)]="Array.start_date" placeholder="Start date"></textarea></td>
-    <td style="width: 7.5%;"><button class = "button" (click)="deleteProject(Array)">Delete</button></td>
-    <td style="width: 7.5%;"><button class = "button" (click)="updateProject(Array)">Update</button></td>
+    <td style="width: 33%;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
+    <td style="width: 12%;"> <textarea [(ngModel)]="Array.start_date" placeholder="Start date"></textarea></td>
+    <td style="width: 7%;"><button class = "button" (click)="deleteProject(Array)">Delete</button><span>&nbsp;</span> 
+    <button class = "button" (click)="updateProject(Array)">Update</button></td>
   </tr>
-</table> 
+</table>
+<table style="width:30%; float: left;">
+  <tr>
+    <th style="text-align:center">Name</th>
+    <th style="text-align:center;">Stack</th>
+    <th style="text-align:center">Edit</th>
+  </tr>
+  <tr *ngFor="let stack_array of stack_data">
+    <td style="width: 35%; height:60%;"> <textarea [(ngModel)]="stack_array.name" placeholder="Name"></textarea></td>
+    <td style="width: 55%; height:60%;"> <textarea [(ngModel)]="stack_array.stack" placeholder="Stack"></textarea></td>
+    <td style="width: 15%;"><button class = "button" (click)="deleteStack(stack_array)">Delete</button><span>&nbsp;</span> 
+    <button class = "button" (click)="updateStack(stack_array)">Update</button></td>
+  </tr>
+</table>
+<app-project-form (getProjects)="getProjects()" style="float:left"></app-project-form>
+<app-stack-form (getStacks)="getStacks()" style="float:right"></app-stack-form>  
 </div>
-<app-project-form (getProjects)="getProjects()"></app-project-form>
 </html>

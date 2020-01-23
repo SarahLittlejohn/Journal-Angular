@@ -17,21 +17,18 @@ html {
   
     
     h2 {
-  
+      display:inline;
       padding: 0 0rem 0rem;
       font-size: 2.1rem;
       color: black;
-      margin-left: 213px;
-      margin-right: auto
   
     }
     
     h3 {
-  
-      font-size: 1.5rem;
+
+      font-size: 2.1rem;
       color: black;
-      margin-left: 11.4rem;
-      margin-right: auto;
+      margin-right: 250px;
 
     }
     
@@ -50,10 +47,7 @@ html {
   
     table {
   
-      width: 100%;
-      margin-left: 90px;
-      margin-right: auto;
-      display: inline-block;
+      display: inline;
     }
   
     table, th, td {
@@ -97,13 +91,12 @@ html {
       background-color: white;
       border: none;
       color: black;
-      box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
       padding: 10px 10px;
       text-align: center;
       text-decoration: none;
       font-size: 1.4rem;
       border-radius: 10px;
-      width: 170px;
+      width: 80px;
       margin-right: auto
     }
     
@@ -114,11 +107,9 @@ html {
     }
   
     form {
-      margin-left: 10rem;
       background: #F6F6F6;
-      display: inline-block;
-      position: absolute;
       text-align: center;
+      display: inline-block;
     }
   
     
@@ -138,4 +129,3 @@ html {
       color: black;
       resize: none;
    }
-  

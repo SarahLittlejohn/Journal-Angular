@@ -17,7 +17,7 @@
    input {
       
     background-color: white;
-    width: 160px;
+    width: 180px;
     font-size: 1.4rem;
     color: black;
     resize: none;
@@ -35,8 +35,8 @@
     font-size: 1.4rem;
     border-radius: 10px;
     width: 80px;
+    margin-right: auto;
     margin-top: 5px;
-    margin-right: auto
   }
   
   .button:hover {
@@ -45,10 +45,3 @@
     transform: translate3D(0, -2px, 0);
   }
   
-  .start_date {
-    width: 100px;
-    background-color: white;
-    font-size: 1.4rem;
-    color: black;
-    resize: none;
-  }

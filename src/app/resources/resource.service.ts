@@ -13,7 +13,7 @@ const httpOptions = {
 
 export class ResourceService {
 
-  private apiUrl = 'http://localhost:8098/resources';
+  private apiUrl = 'http://localhost:8071/resources';
   // define the apiUrl as a private property
 
   constructor(private http: HttpClient) { 

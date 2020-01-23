@@ -10,7 +10,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <label class="input-field">Stack:
-        <input type="checkbox" #stack id="stacks" required>
+        <input #stack id="stacks" required>
       </label>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
@@ -18,7 +18,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <button class = "button" (click)="createStack(name.value, stack.value, description.value, start_date.value)">
+      <button class = "button" (click)="createStack(name.value, stack.value)">
         Add
       </button>
     </div>

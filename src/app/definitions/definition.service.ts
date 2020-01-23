@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class DefinitionService {
 
-  private apiUrl = 'http://localhost:8098/definitions';
+  private apiUrl = 'http://localhost:8071/definitions';
   // define the apiUrl as a private property
 
   constructor(private http: HttpClient) { 

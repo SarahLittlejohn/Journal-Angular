@@ -6,14 +6,14 @@ import { Stack } from './stack';
 
 @Component({
   selector: 'app-stacks',
-  templateUrl: './stack.component.html',
-  styleUrls: ['./stack.component.css']
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.css']
 })
 
 export class StacksComponent {
 
   title = 'Stacks';
-  data: any = {};
+  stack_data: any = {};
 
   constructor(private StackService: StackService) {
     // constructor initilises .getLangauages 
@@ -21,16 +21,16 @@ export class StacksComponent {
   }
   
   getStacks() {
-    this.StackService.getData().subscribe(data => {
+    this.StackService.getData().subscribe(stack_data => {
     // .getLData returns an observable so it must be subscribed to
-    console.log(data);
+    console.log(stack_data);
     // data is logged on the console
-    this.data = data
+    this.stack_data = stack_data
     })
   }
 
   deleteStack(stack: Stack): void {
-    this.data = this.data.filter((l: Stack) => l !== stack);
+    this.stack_data = this.stack_data.filter((l: Stack) => l !== stack);
     // .filter() returns a new array after filtering out certain elements
     this.StackService.deleteStack(stack).subscribe();
     // .deleteStack returns an observable so it needs to be subscribed to
