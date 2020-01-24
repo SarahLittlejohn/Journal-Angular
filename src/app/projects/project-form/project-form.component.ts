@@ -11,10 +11,11 @@ import { Project } from '../project';
 export class ProjectFormComponent implements OnInit {
 
   @Output() getProjects = new EventEmitter();
+  @Output() getStacks = new EventEmitter();
 
   constructor(private projectService: ProjectService) { }
 
-  ngOnInit() {
+  ngOnInit() { this.get_stacks()
   }
 
   createProject(name: string, stack: string, description: string, start_date: string) {
@@ -29,5 +30,9 @@ export class ProjectFormComponent implements OnInit {
       }, 100);
     }
   
-}
+    get_stacks(){
+      this.getStacks.emit();
+    }
+
+  }
 

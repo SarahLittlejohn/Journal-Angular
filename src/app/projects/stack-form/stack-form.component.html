@@ -1,7 +1,7 @@
 <form class="stack-form">
     <div>
       <label class="input-field" for="name">Name:
-      <input #name list="names" id="name" name="name">
+      <input #name list="names" id="name" name="name" style="width: 380px;">
     </label>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
@@ -9,8 +9,14 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
+      <script src="jquery.js"></script>
+      <button class = "button" (click)="createStack(name.value, stack.value)">
+        Add
+      </button>
+      <br/>
+      <br/>
       <label class="input-field">Stack:
-        <input #stack id="stacks" required>
+        <input #stack id="stacks" required style="width: 490px;">
       </label>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
@@ -18,9 +24,6 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <button class = "button" (click)="createStack(name.value, stack.value)">
-        Add
-      </button>
     </div>
 </form>
 

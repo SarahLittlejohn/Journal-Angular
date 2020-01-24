@@ -1,11 +1,23 @@
 <html>
+<script src="jquery-3.4.1.min.js"></script>
 <br />
-<h2 style="margin-left: 60px;"> Projects </h2>
-<h2 style="margin-left: 1030px;"> Stacks </h2>
+<h2 style="margin-left: 55px;"> Projects </h2>
+<h2 style="margin-left: 1010px;"> Stacks </h2>
 
 
+<div>
+  <app-project-form (getProjects)="getProjects()" style="float:left; margin-left: 55px;"></app-project-form>
+  <app-stack-form (getStacks)="getStacks()" style="float:right; margin-right: 85px;"></app-stack-form>  
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <div class="wrapper;">
+<br/>
 <table style="width:55%; float: left; margin-right: 125px; margin-left: 55px;">
   <tr>
     <th style="text-align:center">ID</th>
@@ -38,7 +50,5 @@
     <button class = "button" (click)="updateStack(stack_array)">Update</button></td>
   </tr>
 </table>
-<app-project-form (getProjects)="getProjects()" style="float:left"></app-project-form>
-<app-stack-form (getStacks)="getStacks()" style="float:right"></app-stack-form>  
 </div>
 </html>

@@ -1,33 +1,33 @@
 <form class="project-form">
     <div>
       <label class="input-field" for="name">Name:
-      <input #name list="names" id="name" name="name">
+      <input #name list="names" id="name" name="name" style="width: 252px;">
     </label>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <label class="input-field">Stack:
-        <input #stack>
+
+
+
+      <label class="input-field" name="getStacks">Stack:
+        <select #stack style="width: 252px;" *ngFor >
+        <option></option>
+      </select>
       </label>
+
+
+
+
       <span>&nbsp;</span> 
       <span>&nbsp;</span>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <span>&nbsp;</span> 
-      <span>&nbsp;</span> 
-      <label class="input-field">Description:
-        <input #description />
-      </label>
-      <span>&nbsp;</span> 
-      <span>&nbsp;</span> 
-      <span>&nbsp;</span> 
-      <span>&nbsp;</span>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <label class="input-field">Start date:
-        <input #start_date style="width: 90px"/>
+        <input #start_date style="width: 152px" type="date"/>
       </label>
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
@@ -38,6 +38,11 @@
       <button class = "button" (click)="createProject(name.value, stack.value, description.value, start_date.value)">
         Add
       </button>
+      <br>
+      <br>
+      <label class="input-field">Description:
+        <input #description style="width: 900px;">
+      </label>
     </div>
 </form>
 
