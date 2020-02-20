@@ -22,7 +22,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <button class="button" (click)="createDefinition(name.value, info.value)">
+      <button class="button" (click)="createDefinition(name.value, info.value); name.value = ''; info.value = ''">
         Add
       </button>
     </div>

@@ -25,7 +25,7 @@ export class ProjectService {
     // .get returns an observable 
   }
 
-  updateLData(project: Project): Observable<Project> {
+  updateData(project: Project): Observable<Project> {
     const url = `${this.apiUrl}/${project.projectId}`;
     // defines url to put
     return this.http.put<Project>(url, project, httpOptions);

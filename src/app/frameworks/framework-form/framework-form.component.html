@@ -32,7 +32,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
-      <button class = "button" (click)="createFramework(name.value, url.value, description.value)">
+      <button class = "button" (click)="createFramework(name.value, url.value, description.value); name.value = ''; url.value = ''; description.value = ''">
         Add
       </button>
     </div>

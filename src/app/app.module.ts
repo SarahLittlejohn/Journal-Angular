@@ -13,10 +13,10 @@ import { FrameworkFormComponent } from './frameworks/framework-form/framework-fo
 import { LanguageFormComponent } from './languages/language-form/language-form.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
 import { DefinitionFormComponent } from './definitions/definitions-form/definition-form.component';
-import { StacksComponent } from './projects/stack/stack.component';
+import { StacksComponent } from './projects/stack.component';
 import { ProjectFormComponent } from './projects/project-form/project-form.component';
 import { ProjectComponent } from './projects/project.component';
-import { StackFormComponent } from './projects/stack/stack-form/stack-form.component';
+import { StackFormComponent } from './projects/stack-form/stack-form.component';
 
 @NgModule({
   declarations: [

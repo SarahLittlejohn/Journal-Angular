@@ -13,7 +13,7 @@ import { Stack } from './stack';
 export class StacksComponent {
 
   title = 'Stacks';
-  stack_data: any = {};
+  stack_data: any = [];
 
   constructor(private StackService: StackService) {
     // constructor initilises .getLangauages 

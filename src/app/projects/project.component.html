@@ -6,7 +6,7 @@
 
 
 <div>
-  <app-project-form (getProjects)="getProjects()" style="float:left; margin-left: 55px;"></app-project-form>
+  <app-project-form (getProjects)="getProjects()" [stacks]="stack_data" style="float:left; margin-left: 55px;"></app-project-form>
   <app-stack-form (getStacks)="getStacks()" style="float:right; margin-right: 85px;"></app-stack-form>  
 </div>
 
@@ -18,7 +18,7 @@
 
 <div class="wrapper;">
 <br/>
-<table style="width:55%; float: left; margin-right: 125px; margin-left: 55px;">
+<table style="width:55%; float: left; margin-right: 120px; margin-left: 55px;">
   <tr>
     <th style="text-align:center">ID</th>
     <th style="text-align:center">Name</th>
@@ -29,10 +29,10 @@
   </tr>
   <tr *ngFor="let Array of data">
     <td style="text-align:center; width: 5%">{{Array.projectId}}</td>
-    <td style="width: 23%;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
-    <td style="width: 23%;"> <textarea [(ngModel)]="Array.stack" placeholder="Stack"></textarea></td>
+    <td style="width: 22%;"> <textarea [(ngModel)]="Array.name" placeholder="Name"></textarea></td>
+    <td style="width: 22%;"> <textarea [(ngModel)]="Array.stack" placeholder="Stack"></textarea></td>
     <td style="width: 33%;"> <textarea [(ngModel)]="Array.description" placeholder="Description"></textarea></td>
-    <td style="width: 12%;"> <textarea [(ngModel)]="Array.start_date" placeholder="Start date"></textarea></td>
+    <td style="width: 14%;"> <textarea [(ngModel)]="Array.start_date" placeholder="Start date"></textarea></td>
     <td style="width: 7%;"><button class = "button" (click)="deleteProject(Array)">Delete</button><span>&nbsp;</span> 
     <button class = "button" (click)="updateProject(Array)">Update</button></td>
   </tr>

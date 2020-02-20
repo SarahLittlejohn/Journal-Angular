@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { ProjectService } from 'src/app/projects/project.service';
 import { Project } from '../project';
 
@@ -10,28 +10,26 @@ import { Project } from '../project';
 
 export class ProjectFormComponent implements OnInit {
 
+  // Asking the parent (ProjectComponent) to do something 
   @Output() getProjects = new EventEmitter();
-  @Output() getStacks = new EventEmitter();
+  // Getting the info from the parent (StackComponent)
+  @Input() stacks = [];
 
   constructor(private projectService: ProjectService) { }
 
-  ngOnInit() { this.get_stacks()
+  ngOnInit() {
   }
 
-  createProject(name: string, stack: string, description: string, start_date: string) {
+  createProject(name: string, description: string, start_date: string, stack: string) {
     let new_project = new Project;
     new_project.name = name;
     new_project.description = description;
-    new_project.stack = stack;
     new_project.start_date = start_date;
+    new_project.stack = stack;
     this.projectService.addProject(new_project); 
     setTimeout(()=>{
       this.getProjects.emit();
       }, 100);
-    }
-  
-    get_stacks(){
-      this.getStacks.emit();
     }
 
   }

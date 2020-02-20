@@ -10,7 +10,7 @@
       <span>&nbsp;</span> 
       <span>&nbsp;</span> 
       <script src="jquery.js"></script>
-      <button class = "button" (click)="createStack(name.value, stack.value)">
+      <button class = "button" (click)="createStack(name.value, stack.value); stack.value = ''; name.value = ''">
         Add
       </button>
       <br/>
